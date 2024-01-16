@@ -17,14 +17,11 @@ function func() {
         }
         var copiedText = blank.slice(0, 50);
         
-        // Check if the text exceeds 50 characters
         if (blank.length > 50) {
-            // Set the copied text initially
             showPara = document.createElement('p');
             showPara.innerText = copiedText;
             document.body.appendChild(showPara);
         } else {
-            // Set the full text if it's 50 characters or less
             showPara = document.createElement('p');
             showPara.innerText = blank;
             document.body.appendChild(showPara);
@@ -34,11 +31,9 @@ function func() {
 
 function seeText() {
     if (see_button.innerText === "See more") {
-        // Display the full text
         showPara.innerText = blank;
         see_button.innerText = "See less";
     } else {
-        // Display the copied text
         showPara.innerText = blank.slice(0, 50);
         see_button.innerText = "See more";
     }
